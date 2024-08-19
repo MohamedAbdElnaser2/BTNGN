@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAUD</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<div class="container py-4">
+    <h1>Product Management System </h1>
+    <div class="form-group my-4">
+        <label for="productName">product Name</label>
+        <input type="text" id="productName" class="form-control" value="" >
+        <p id="invalidName" class="text-danger d-none">please Enter Name With 4 capital character</p>
+    </div>
+
+    <div class="form-group my-4"> <label for="productprice">product Price</label>
+        <input type="number" id="productprice" class="form-control" value="" >
+        <p id="invalidprice" class="text-danger d-none">please Enter number</p>
+    </div>
+       
+    <div  class="form-group my-4">
+        <label for="productcat">product Catagory</label>
+        <input type="text" id="productcat" class="form-control" value="" >
+        <p id="invalidcat" class="text-danger d-none">please Enter a or b</p>
+    </div>
+    <div  class="form-group my-4">
+        <label for="productdes">product Description</label>
+        <input type="text" id="productdes" class="form-control" value="" >
+        <p id="invaliddes" class="text-danger d-none">please Enter Description</p>
+        
+    </div>
+       
+    <button onclick="Add()" class="btn btn-outline-primary">Add Product</button>
+    <button class="btn btn-success d-none"  id="savebut" onclick="saveUpdate()">Save Update</button>
+        
+        <input type="text" id="serbtn" class="form-control my-3" placeholder="searech" >
+        <button  onclick="serByName()" class="btn-warning my-3 py-2">searchByName</button> <button onclick="serByCat()" class="btn btn-danger my-3 py-2">searchByCatagry</button>
+<table class="table text-white text-center my-4">
+<table class="table text-white text-center my-4">
+
+<thead>
+    <th>index</th>
+    <th>product Name</th>
+    <th>product Price</th>
+    <th>product Catagort</th>
+    <th>product Description</th>
+    <th>Update</th>
+    <th>Delet</th>
+    
+</thead>
+<tbody id="tbody">
+    
+</tbody>
+
+</table>
+ 
+
+
+</div>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
