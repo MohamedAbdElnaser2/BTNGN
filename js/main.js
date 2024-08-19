@@ -18,7 +18,7 @@ function Updatelocalstor(){
     localStorage.setItem("productList",JSON.stringify(productList))
 }
 function Add(){
-    if(validateName( ) & validateprice()& validatecat() & validatedes()){
+    if(validateName( ) && validateprice()&& validatecat() && validatedes()){
         var product ={name:productName.value,
             price:productPrice.value,
             cat:productCat.value,
@@ -29,14 +29,16 @@ function Add(){
          Updatelocalstor()
          
          display(productList);
-         validateName()
-         validateprice()
-         validatecat()
-         validatedes()
+        
          clear()
          savebut.classList.add("d-none")
     }
-    
+    else{
+        validateName()
+        validateprice()
+        validatecat()
+        validatedes()
+    }
  
 }
 function display(data){
@@ -165,7 +167,7 @@ function serByCat(data){
  }
  
  function validatedes(){
-    var regex =/[a-zA-Z]{200}/
+    var regex =/[a-zA-Z]{4,200}/
 
     if(regex.test(productDes.value)){
         return true;
